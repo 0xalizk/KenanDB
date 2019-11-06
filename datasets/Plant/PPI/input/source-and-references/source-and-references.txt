@@ -1,0 +1,41 @@
+Arabidopsis interactome
+
+Plant_before_extracting_largest_component.txt = Table S4 where column AI-1MAIN==1; in article: http://science.sciencemag.org/content/333/6042/601.full, supp. material: http://science.sciencemag.org/content/suppl/2011/07/27/333.6042.601.DC1?_ga=1.5789044.675240232.1486241971
+
+Plant.txt = The largest component extracted ($util/network_stats/extract_largest_component.py on Plant_before_extracting_largest_component.txt) 
+
+Sign and direction are randomized (by extract_largest_component.py)
+
+These are Y2H validated interactions. In Table S4, all Arabidopsis plant interactions (from IntAct i think) are there
+but the experimentally validated interactions are those with column AI-1MAIN==1. 
+The same table can also be found at: http://interactome.dfci.harvard.edu/A_thaliana/index.php?page=download
+
+
+from the paper:
+"A high-quality binary protein-protein interactome map for Arabidopsis. To generate a map of the Arabidopsis interactome network, 
+we used a collection of ~8000 open reading frames representing ~30% of its predicted protein-coding genes (fig. S2 and table S3) (2, 3).
+ We tested all pairwise combinations of proteins encoded by these constructs (space 1) with an improved high-throughput binary interactome 
+ mapping pipeline based on the yeast two-hybrid (Y2H) system (fig. S2) (3, 4). Confirmed pairs were assembled into a data set of 5664 binary 
+ interactions between 2661 proteins, called Arabidopsis Interactome version 1 “main screen” (AI-1MAIN) (table S4)."
+ 
+
+
+========================================
+stdout of extract_largeset_component.py:
+========================================
+
+		########################################  Plant_before_extracting_largest_component.txt  ########################################
+
+		WARNING from init.py: found 135 self-loops, here is one of them: ('AT3G29270', 'AT3G29270')
+
+		*************** The edges in the newly created largest component will be RANDOMIZED (change randomize_edge_direction=False if you want otherwise) *********
+		*************** This is because I'm assuming the network is undirected unless otherwise specified *********
+
+		no. connected components: 124
+		component sizes: [2402, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+		M.nodes() before              2661
+		M.edges() before              5664
+		len(delete_nodes):            259
+		len(set(delete_nodes)):       259
+		M.nodes() after               2402
+		M.edges() after               5486

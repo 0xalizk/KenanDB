@@ -1,0 +1,29 @@
+Caenorhabditis elegans  or C. elegans (Worm):
+
+article : "Empirically controlled mapping of the Caenorhabditis elegans protein-protein interactome network": http://www.nature.com/nmeth/journal/v6/n1/full/nmeth.1279.html
+
+WI-8.xlsx = original network (WI8) downloaded from: http://interactome.dfci.harvard.edu/C_elegans/graphs/sequence_edges/wi8.txt
+WI-9_clean.txt = removed excess columns from WI-8.xlsx
+Worm.txt = applied $util/network_stats/extract_largest_component.py  on WI-9_clean.txt , with both sign and direction randomized by init.load_network()
+
+IDA and IDB seem to be ORF IDs actually
+
+
+========================================
+stdout of extract_largeset_component.py:
+========================================
+
+	WARNING from init.py: found 158 self-loops, here is one of them: ('ZK829.7', 'ZK829.7')
+
+	*************** The edges in the newly created largest component will be RANDOMIZED (change randomize_edge_direction=False if you want otherwise) *********
+	*************** This is because I'm assuming the network is undirected unless otherwise specified *********
+
+	no. connected components: 147
+	component sizes: [2214, 7, 6, 5, 5, 5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+	M.nodes() before              2528
+	M.edges() before              3864
+	len(delete_nodes):            314
+	len(set(delete_nodes)):       314
+	M.nodes() after               2214
+	M.edges() after               3659   <<< number of edges in the largest component
+

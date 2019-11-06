@@ -1,0 +1,108 @@
+
+Some interactors returned by PSICQUIC database correspond to isoforms of genes (they typically contain "-" followed by a number, e.g. P10415-1 in Homo sapiens)
+
+The following MIQL queries were submitted to all active PSICQUIC services (=molecular interaction databases) thru the in-house Python script June_16_run/parser.py
+
+Only species large hits ( > 500) were considered: 
+
+
+The MIQL queries are: 
+Human: 
+taxidA:9606 AND  taxidB:9606 AND type:"direct interaction" AND detmethod:"experimental interaction detection" 
+
+Yeast:
+taxidA:559292 AND  taxidB:559292 AND type:"direct interaction" AND detmethod:"experimental interaction detection" 
+
+Plant:
+taxidA:3702 AND  taxidB:3702 AND type:"direct interaction" AND detmethod:"experimental interaction detection" 
+
+
+See   June_16_run/parser_output.txt              for more details
+See   June_16_run/psicquic_services_status.log   for more PSICQUIC technical details
+
+The Human-PSICQUIC.txt, Plant_PSICQUIC.txt, and Yeast_PSICQUIC.txt were  obtained by running $util/network_stats/src/extract_larget_component.py on Human-PSICQUIC_extracted.txt , Plant-PSICQUIC_extracted.txt  and Yeast-PSICQUIC_extracted.txt 
+Here is the output of extract_larget_component.py
+
+########################################  Human-PSICQUIC_extracted.txt (undirected) ########################################
+
+WARNING from init.py: found (and ignored) 913 duplicate edges, here is some of them: 
+
+Q14451                   P10275                   
+Q13480                   Q9ULZ2                   
+Q13480                   Q13882                   
+P08581                   Q9H6Q3                   
+O14796                   P10721                   
+
+WARNING from init.py: found 381 self-loops, here is one of them: ('Q53GS7', 'Q53GS7')
+
+*************** The edges in the newly created largest component will be RANDOMIZED (change undirected=False if you want otherwise) *********
+*************** This is because I'm assuming the network is undirected unless otherwise specified *********
+
+no. connected components: 323
+component sizes: [3470, 16, 12, 7, 6, 6, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+M.nodes() before              4146
+M.edges() before              6701
+len(delete_nodes):            676
+len(set(delete_nodes)):       676
+M.nodes() after               3470
+M.edges() after               6188
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Human/PSICQUIC/input/Human-PSICQUIC_undirected_largest_component.txt
+
+
+########################################  Plant-PSICQUIC_extracted.txt (undirected) ########################################
+
+WARNING from init.py: found (and ignored) 70 duplicate edges, here is some of them: 
+
+Q9LDI3                   O81223                   
+P48349                   Q94AG2                   
+Q94A06                   Q8GYQ5                   
+P54609                   Q94AG2                   
+Q8LGD5                   Q39024                   
+
+WARNING from init.py: found 63 self-loops, here is one of them: ('Q9MBA2', 'Q9MBA2')
+
+*************** The edges in the newly created largest component will be RANDOMIZED (change undirected=False if you want otherwise) *********
+*************** This is because I'm assuming the network is undirected unless otherwise specified *********
+
+no. connected components: 159
+component sizes: [230, 34, 21, 16, 15, 11, 11, 11, 10, 10, 9, 9, 8, 8, 7, 7, 7, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+M.nodes() before              815
+M.edges() before              1325
+len(delete_nodes):            585
+len(set(delete_nodes)):       585
+M.nodes() after               230
+M.edges() after               789
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Plant/PSICQUIC/input/Plant-PSICQUIC_undirected_largest_component.txt
+
+########################################  Yeast-PSICQUIC_extracted.txt (undirected) ########################################
+
+WARNING from init.py: found (and ignored) 172 duplicate edges, here is some of them: 
+
+P43603                   Q06604                   
+P15891                   P43603                   
+Q12344                   P43603                   
+P53064                   P04050                   
+Q12446                   P39743                   
+
+WARNING from init.py: found 54 self-loops, here is one of them: ('Q02629', 'Q02629')
+
+*************** The edges in the newly created largest component will be RANDOMIZED (change undirected=False if you want otherwise) *********
+*************** This is because I'm assuming the network is undirected unless otherwise specified *********
+
+no. connected components: 112
+component sizes: [767, 12, 9, 9, 8, 8, 7, 7, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+M.nodes() before              1067
+M.edges() before              1614
+len(delete_nodes):            300
+len(set(delete_nodes)):       300
+M.nodes() after               767
+M.edges() after               1386
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Yeast/PSICQUIC/input/Yeast-PSICQUIC_undirected_largest_component.txt
+
+####################################################################################################################
+
+reference:
+Aranda, Bruno, et al. "PSICQUIC and PSISCORE: accessing and scoring molecular interactions." Nature methods 8.7 (2011): 528-529.

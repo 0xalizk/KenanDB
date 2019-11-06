@@ -1,0 +1,46 @@
+
+The original network was downloaded from:
+
+http://encodenets.gersteinlab.org/enets7.K562_proximal_filtered_network.txt 
+
+The only modification to the original file is to add a first line (column header) "source target"
+
+Human-ENCODE-K562.txt was obtained by running $util/network_stats/src/extract_larget_component.py on enets7.K562_proximal_filtered_network.txt  
+Here is the output of extract_larget_component.py
+
+########################################  Human-ENCODE-K562.txt (directed) ########################################
+
+WARNING from init.py: found (and ignored) 1419 duplicate edges, here is some of them: 
+
+CTCF                     AARS2                    
+MAX                      ABCA17P                  
+CTCF                     ABCA2                    
+MAX                      ABCA3                    
+MYC                      ABCF1                    
+
+WARNING from init.py: found 6 bidirectional edges, here is the first few:
+('GTF2B', 'EGR1')
+('EGR1', 'GTF2B')
+('SP2', 'SP1')
+('SP1', 'SP2')
+('STAT2', 'STAT1')
+
+
+WARNING from init.py: found 12 self-loops, here is one of them: ('THAP1', 'THAP1')
+
+no. connected components: 1
+component sizes: [3947]
+M.nodes() before              3947
+M.edges() before              9595
+len(delete_nodes):            0
+len(set(delete_nodes)):       0
+M.nodes() after               3947
+M.edges() after               9595
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Human/ENCODE-K562/input/Human-ENCODE-K562_directed_largest_component.txt
+
+####################################################################################################################
+
+reference:
+Gerstein, Mark B., et al. "Architecture of the human regulatory network derived from ENCODE data." Nature 489.7414 (2012): 91-100. 
+http://www.nature.com/nature/journal/v489/n7414/abs/nature11245.html

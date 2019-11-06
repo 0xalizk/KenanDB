@@ -1,0 +1,60 @@
+The Excel file miRTarBase_SE_WR.xls was downloaded from http://mirtarbase.mbc.nctu.edu.tw/php/download.php on June 15 2017
+
+These interactions are "Supported by strong experimental evidences (Reporter assay or Western blot)" as per miRTarBase maintainers.
+
+Interactions were filtered by organism:
+
+miRTarBase_SE_WR_Human.xlsx = Interactions where "Species (miRNA)" AND "Species (Target Gene)" == "Homo sapiens" (5 rows where Target Gene was empty were removed)
+miRTarBase_SE_WR_Mouse.xlsx = Interactions where "Species (miRNA)" AND "Species (Target Gene)" == "Mus Musculus" (3 rows where Target Gene was empty were removed)
+
+Human-miRTarBase_extracted.txt = "miRNA" and "Target Gene" columns from miRTarBase_SE_WR_Human.xlsx 
+Mouse-miRTarBase_extracted.txt = "miRNA" and "Target Gene" columns from miRTarBase_SE_WR_Human.xlsx 
+
+The files Human-miRTarBase.txt and Mouse-miRTarBase.txt were obtained by running $util/network_stats/src/extract_larget_component.py on Human-miRTarBase_extracted.txt and Mouse-miRTarBase_extracted.txt
+Here is the output of extract_larget_component.py
+
+########################################  Human-miRTarBase_extracted.txt (directed) ########################################
+
+WARNING from init.py: found (and ignored) 1702 duplicate edges, here is some of them: 
+
+HSA-MIR-122-5P           SLC7A1                   
+HSA-MIR-122-5P           SLC7A1                   
+HSA-MIR-122-5P           ADAM17                   
+HSA-MIR-122-5P           AKT3                     
+HSA-MIR-128-3P           E2F3                     
+no. connected components: 48
+component sizes: [2583, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+M.nodes() before              2689
+M.edges() before              5509
+len(delete_nodes):            106
+len(set(delete_nodes)):       106
+M.nodes() after               2583
+M.edges() after               5450
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Human/miRTarBase/input/source-and-references/Human-miRTarBase_directed_largest_component.txt
+
+########################################  Mouse-miRTarBase_extracted.txt (directed) ########################################
+
+WARNING from init.py: found (and ignored) 129 duplicate edges, here is some of them: 
+
+MMU-MIR-122-5P           NDRG3                    
+MMU-MIR-122-5P           ALDOA                    
+MMU-MIR-122-5P           ALDOA                    
+MMU-MIR-122-5P           ALDOA                    
+MMU-MIR-122-5P           ALDOA                    
+no. connected components: 44
+component sizes: [741, 9, 9, 8, 5, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+M.nodes() before              856
+M.edges() before              1097
+len(delete_nodes):            115
+len(set(delete_nodes)):       115
+M.nodes() after               741
+M.edges() after               1019
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Mouse/miRTarBase/input/Mouse-miRTarBase_directed_largest_component.txt
+
+####################################################################################################################
+
+
+reference:
+Chou, Chih-Hung, et al. "miRTarBase 2016: updates to the experimentally validated miRNA-target interactions database." Nucleic acids research 44.D1 (2015): D239-D247.

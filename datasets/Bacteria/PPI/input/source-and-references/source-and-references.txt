@@ -1,0 +1,36 @@
+Y2H of E coli, direction and signs both randomized: 
+
+taken from Supplementary Table 2 (249 KB) "The binary protein-protein interaction landscape of Escherichia coli" : http://www.nature.com/nbt/journal/v32/n3/full/nbt.2831.html#supplementary-information
+--------------------------------------------------------------------------------------------------------------------------------
+nbt.2831-S3.xls       = the original Table 2
+nbt.2831-S3_clean.txt = removed excess columns, didn't use uniport_id because it's not available for all interactions
+Bacteria.txt             = the result of running $util/network_stats/extract_largest_component.py on nbt.2831-S3_clean.txt
+						NOTE: since this is Y2H network, (u,v) = (v,u) and so undirected==True in extract_largest_component.py ==> these interactions are considered the same 
+						
+						extract_largest_component.py output: 
+						########################################  nbt.2831-S3_clean.txt  ########################################
+
+						WARNING from init.py: found (and ignored) 46 duplicate edges, here is some of them: 
+
+						JW0689                   JW0514                   
+						JW0957                   JW0955                   
+						JW1441                   JW0885                   
+						JW1838                   JW0411                   
+						JW2280                   JW2278                   
+
+						WARNING from init.py: found 247 self-loops, here is one of them: ('JW0845', 'JW0845')
+
+						*************** The edges in the newly created largest component will be RANDOMIZED (change undirected=False if you want otherwise) *********
+						*************** This is because I'm assuming the network is undirected unless otherwise specified *********
+
+						no. connected components: 138
+						component sizes: [1014, 8, 7, 6, 6, 5, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+						M.nodes() before              1267
+						M.edges() before              2188
+						len(delete_nodes):            253
+						len(set(delete_nodes)):       253
+						M.nodes() after               1014
+						M.edges() after               1967
+
+--------------------------------------------------------------------------------------------------------------------------------
+see also: "Protein-protein Interaction Networks of E. coli and S. cerevisiae are similar" http://www.nature.com/articles/srep07187

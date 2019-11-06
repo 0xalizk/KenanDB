@@ -1,0 +1,95 @@
+source-and-references/$ python parser.py 
+====================================================================================================
+                                        Human-PSICQUIC                                        
+====================================================================================================
+APID Interactomes .......   0      hits
+BioGrid .................   0      hits
+bhf-ucl .................   101    hits .. processed
+ChEMBL ..................   0      hits
+HPIDb ...................   207    hits .. processed
+InnateDB ................   0      hits
+InnateDB-All ............   0      hits
+IntAct ..................   6170   hits .. processed
+MPIDB ...................   6      hits .. processed
+MatrixDB ................   0      hits
+MINT ....................   4426   hits .. processed
+Reactome ................   0      hits
+Reactome-FIs ............   0      hits
+EBI-GOA-miRNA ...........   0      hits
+I2D .....................   0      hits
+I2D-IMEx ................   126    hits .. processed
+InnateDB-IMEx ...........   33     hits .. processed
+MolCon ..................   14     hits .. processed
+UniProt .................   564    hits .. processed
+MBInfo ..................   20     hits .. processed
+BindingDB ...............   0      hits
+VirHostNet ..............   0      hits
+GeneMANIA ...............   0      hits
+BAR .....................   0      hits
+EBI-GOA-nonIntAct .......   0      hits
+ZINC ....................   0      hits
+
+Total hits: 11667,	unique hits: 7614 (4053 duplicates)
+====================================================================================================
+                                        Plant-PSICQUIC                                        
+====================================================================================================
+APID Interactomes .......   0      hits
+BioGrid .................   0      hits
+bhf-ucl .................   0      hits
+ChEMBL ..................   0      hits
+HPIDb ...................   0      hits
+InnateDB ................   0      hits
+InnateDB-All ............   0      hits
+IntAct ..................   1411   hits .. processed
+MPIDB ...................   0      hits
+MatrixDB ................   0      hits
+MINT ....................   144    hits .. processed
+Reactome ................   0      hits
+Reactome-FIs ............   0      hits
+EBI-GOA-miRNA ...........   0      hits
+I2D .....................   0      hits
+I2D-IMEx ................   0      hits
+InnateDB-IMEx ...........   0      hits
+MolCon ..................   0      hits
+UniProt .................   10     hits .. processed
+MBInfo ..................   0      hits
+BindingDB ...............   0      hits
+VirHostNet ..............   0      hits
+GeneMANIA ...............   0      hits
+BAR .....................   0      hits
+EBI-GOA-nonIntAct .......   0      hits
+ZINC ....................   0      hits
+
+Total hits: 1565,	unique hits: 1395 (170 duplicates)
+====================================================================================================
+                                        Yeast-PSICQUIC                                        
+====================================================================================================
+APID Interactomes .......   0      hits
+BioGrid .................   0      hits
+bhf-ucl .................   0      hits
+ChEMBL ..................   0      hits
+HPIDb ...................   0      hits
+InnateDB ................   0      hits
+InnateDB-All ............   0      hits
+IntAct ..................   1417   hits .. processed
+MPIDB ...................   0      hits
+MatrixDB ................   0      hits
+MINT ....................   837    hits .. processed
+Reactome ................   0      hits
+Reactome-FIs ............   0      hits
+EBI-GOA-miRNA ...........   0      hits
+I2D .....................   0      hits
+I2D-IMEx ................   0      hits
+InnateDB-IMEx ...........   0      hits
+MolCon ..................   0      hits
+UniProt .................   29     hits .. processed
+MBInfo ..................   0      hits
+BindingDB ...............   0      hits
+VirHostNet ..............   0      hits
+GeneMANIA ...............   0      hits
+BAR .....................   0      hits
+EBI-GOA-nonIntAct .......   0      hits
+ZINC ....................   0      hits
+
+Total hits: 2283,	unique hits: 1786 (497 duplicates)
+source-and-references/$ python parser.py 

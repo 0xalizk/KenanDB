@@ -1,0 +1,37 @@
+Fly (Drosophila melanogaster )
+
+Supplementary Table 7 (818 KB), Directed and signed network from "Integrating protein-protein interaction networks with phenotypes reveals signs of interactions" http://www.nature.com/nmeth/journal/v11/n1/full/nmeth.2733.html
+
+nmeth.2733-S2.xlsx      = original network from http://www.nature.com/nmeth/journal/v11/n1/full/nmeth.2733.html#supplementary-information
+nmeth.2733-S2_clean.txt = columns Symbol1 & Symbol2	& Edge_Sign from nmeth.2733-S2.xlsx
+Fly.txt                 = applying $util/network_stats/extract_largest_component.py on nmeth.2733-S2_clean.txt 
+                          extract_largest_component.py: 
+                          
+							malsha17@yamaska ~/EvoByCompSel/parallel/Release-03/src/utilities/network_stats $ python extract_largest_component.py input/extract_largest_component.input 
+							########################################  nmeth.2733-S2_clean.txt  ########################################
+
+							WARNING from init.py: found (and ignored) 31 duplicate edges, here is the first 5 i found: 
+
+							Egfr                     drk                      1
+							Sos                      drk                      1
+							CkIalpha                 arm                      -1
+							CkIalpha                 ci                       1
+							tim                      sgg                      1
+							no. connected components: 132
+							component sizes: [3058, 13, 5, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+							M.nodes() before              3352
+							M.edges() before              6094
+							len(delete_nodes):            294
+							len(set(delete_nodes)):       294
+							M.nodes() after               3058
+							M.edges() after               5930
+                          
+
+From the article:
+"The signed network consists of 6,125 PPIs connecting 3,352 proteins, among which 4,135 PPIs are positive interactions 
+and 1,990 PPIs are negative (Fig. 2a and Supplementary Table 7), with the sign score of each interaction indicating the 
+confidence of the predicted sign. "
+
+"Our analysis revealed that negative interactions tend to have high edge betweenness centrality, meaning that that 
+they are likely to be intermodular interactions, in contrast to positive interactions, which are likely intramodular 
+interactions (P = 2.2 × 10−16, Wilcoxon test; Fig. 2d)."

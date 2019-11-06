@@ -1,0 +1,258 @@
+The file trrust_rawdata.txt was downloaded from http://www.grnpedia.org/trrust/downloadnetwork.php on June 15 2017
+
+The parsing script parser.py extracts the first two columns (source, target), and processes the 3rd column as follows:
+activation ==> +
+repression ==> -
+?          ==> assign a + or - at random (coin flip)
+
+if an interaction between A and B is described as Activation  and  Repression (in two separate rows) ==> 
+the effect with more supporting evidence (last column) is taken; if both have the same number of supporting
+studies, assign a + or - at random (coin flip)
+
+interactions in trrust_rawdata.txt are considered directed (A->B != B->A) 
+
+==================================
+parsing-script/$ python parse.py 
+Total interactions:           8215
+Unique interactions:          8015
+Promotional interactions:     3179   39.66313162819713 %
+Inhibitory interactions:      1881   23.46849656893325 %
+Unknown-effect interactions:  3155   39.36369307548347 %
+
+Interactions	[number of times it was reported +]	[-]	[?]
+==================================================
+('ABL1', 'JUN')               + (1), - (1), ? (1)	chosen: +
+('AHR', 'CYP1A1')             + (2), - (1), ? (1)	chosen: +
+('AR', 'AKT1')                + (1), - (1), ? (1)	chosen: -
+('AR', 'CDKN1A')              + (1), - (1), ? (1)	chosen: -
+('AR', 'KLK3')                + (12), - (2), ? (2)	chosen: +
+('ATF1', 'FTH1')              + (1), - (1), ? (1)	chosen: -
+('ATF4', 'SIRT1')             + (1), - (1), ? (1)	chosen: +
+('ATM', 'CDKN1A')             + (1), - (1), ? (1)	chosen: +
+('ATM', 'CFLAR')              + (1), - (1), ? (1)	chosen: -
+('ATM', 'PVR')                + (1), - (1), ? (1)	chosen: +
+('BRCA1', 'GADD45A')          + (3), - (1), ? (1)	chosen: +
+('CEBPB', 'PTGS2')            + (2), - (1), ? (1)	chosen: +
+('CEBPD', 'DDIT3')            + (1), - (1), ? (1)	chosen: -
+('CIITA', 'IL4')              + (1), - (2), ? (2)	chosen: -
+('CREB1', 'IFNG')             + (2), - (1), ? (1)	chosen: +
+('CREB5', 'DGKG')             + (1), - (1), ? (1)	chosen: -
+('CREM', 'MC2R')              + (1), - (1), ? (1)	chosen: +
+('CREM', 'SLC5A5')            + (1), - (1), ? (1)	chosen: -
+('CRX', 'RBP3')               + (1), - (1), ? (1)	chosen: +
+('CTCF', 'APP')               + (2), - (1), ? (1)	chosen: +
+('CTCF', 'MYC')               + (1), - (2), ? (2)	chosen: -
+('CTCF', 'PAX6')              + (1), - (1), ? (1)	chosen: +
+('CTNNB1', 'CCND1')           + (2), - (1), ? (1)	chosen: +
+('DDIT3', 'TNFRSF10B')        + (7), - (2), ? (2)	chosen: +
+('E2F1', 'BIRC5')             + (2), - (1), ? (1)	chosen: +
+('E2F1', 'KIF2C')             + (1), - (1), ? (1)	chosen: +
+('E2F1', 'TERT')              + (2), - (2), ? (2)	chosen: -
+('E2F1', 'TP53')              + (1), - (1), ? (1)	chosen: +
+('E2F4', 'BRCA1')             + (1), - (4), ? (4)	chosen: -
+('EGR1', 'ALOX5')             + (1), - (1), ? (1)	chosen: +
+('EGR1', 'VEGFA')             + (1), - (1), ? (1)	chosen: -
+('ELF4', 'CXCL8')             + (1), - (1), ? (1)	chosen: -
+('EP300', 'BIRC5')            + (1), - (1), ? (1)	chosen: -
+('ERG', 'TDRD1')              + (1), - (1), ? (1)	chosen: +
+('ESR1', 'CDKN1A')            + (3), - (1), ? (1)	chosen: +
+('ETS1', 'PARP1')             + (1), - (1), ? (1)	chosen: -
+('FOS', 'MMP9')               + (2), - (1), ? (1)	chosen: +
+('FOS', 'NOS2')               + (1), - (1), ? (1)	chosen: +
+('FOXO1', 'IGFBP1')           + (1), - (1), ? (1)	chosen: -
+('FOXP1', 'KLK3')             + (1), - (1), ? (1)	chosen: +
+('GATA1', 'EPO')              + (1), - (1), ? (1)	chosen: +
+('GLI1', 'BCL2')              + (2), - (1), ? (1)	chosen: +
+('HDAC1', 'CCND1')            + (1), - (1), ? (1)	chosen: -
+('HDAC1', 'RECK')             + (1), - (1), ? (1)	chosen: -
+('HDAC1', 'RUNX3')            + (1), - (1), ? (1)	chosen: -
+('HDAC1', 'SPP1')             + (1), - (2), ? (2)	chosen: -
+('HDAC4', 'JUN')              + (1), - (1), ? (1)	chosen: +
+('HDAC7', 'HIF1A')            + (1), - (1), ? (1)	chosen: +
+('HDAC9', 'CFLAR')            + (1), - (1), ? (1)	chosen: +
+('HIC1', 'SIRT1')             + (1), - (1), ? (1)	chosen: -
+('HIF1A', 'MMP2')             + (1), - (2), ? (2)	chosen: -
+('HIF1A', 'TGFB3')            + (1), - (1), ? (1)	chosen: +
+('HIF1A', 'VEGFA')            + (19), - (5), ? (5)	chosen: +
+('HMGA1', 'INSR')             + (1), - (1), ? (1)	chosen: -
+('HOXA10', 'EMX2')            + (1), - (3), ? (3)	chosen: -
+('IFI16', 'AR')               + (1), - (1), ? (1)	chosen: -
+('IRF7', 'IFNB1')             + (1), - (1), ? (1)	chosen: -
+('JUN', 'CCND1')              + (5), - (1), ? (1)	chosen: +
+('JUN', 'MMP9')               + (2), - (1), ? (1)	chosen: +
+('JUN', 'NOS2')               + (1), - (1), ? (1)	chosen: +
+('JUND', 'BCL6')              + (1), - (1), ? (1)	chosen: +
+('JUND', 'MDM2')              + (1), - (1), ? (1)	chosen: -
+('JUND', 'MYB')               + (1), - (1), ? (1)	chosen: -
+('KLF4', 'CCND1')             + (2), - (2), ? (2)	chosen: +
+('KLF4', 'CDKN1A')            + (4), - (2), ? (2)	chosen: +
+('KLF4', 'TP53')              + (1), - (1), ? (1)	chosen: -
+('LMO4', 'BMP7')              + (1), - (1), ? (1)	chosen: +
+('MEF2A', 'MMP10')            + (1), - (1), ? (1)	chosen: +
+('MEF2C', 'JUN')              + (2), - (1), ? (1)	chosen: +
+('MXD1', 'TERT')              + (1), - (1), ? (1)	chosen: +
+('MYB', 'BCL2')               + (1), - (1), ? (1)	chosen: -
+('MYC', 'CDKN1A')             + (1), - (5), ? (5)	chosen: -
+('MYCN', 'NDRG1')             + (1), - (1), ? (1)	chosen: +
+('MYCN', 'TP53')              + (2), - (1), ? (1)	chosen: +
+('NFATC1', 'CD3G')            + (2), - (1), ? (1)	chosen: +
+('NFE2L2', 'GSTA1')           + (1), - (1), ? (1)	chosen: -
+('NFE2L2', 'HMOX1')           + (3), - (1), ? (1)	chosen: +
+('NFE2L2', 'NQO1')            + (1), - (1), ? (1)	chosen: -
+('NFKB1', 'ABCB1')            + (1), - (1), ? (1)	chosen: +
+('NFKB1', 'BCL2')             + (5), - (4), ? (4)	chosen: +
+('NFKB1', 'BCL2L1')           + (8), - (1), ? (1)	chosen: +
+('NFKB1', 'BIRC2')            + (2), - (1), ? (1)	chosen: +
+('NFKB1', 'BIRC3')            + (5), - (3), ? (3)	chosen: +
+('NFKB1', 'CCND1')            + (8), - (1), ? (1)	chosen: +
+('NFKB1', 'CFLAR')            + (3), - (1), ? (1)	chosen: +
+('NFKB1', 'CXCL8')            + (19), - (2), ? (2)	chosen: +
+('NFKB1', 'FAS')              + (2), - (1), ? (1)	chosen: +
+('NFKB1', 'HSD11B2')          + (1), - (1), ? (1)	chosen: +
+('NFKB1', 'IL6')              + (23), - (1), ? (1)	chosen: +
+('NFKB1', 'KLK3')             + (1), - (1), ? (1)	chosen: +
+('NFKB1', 'MCL1')             + (1), - (1), ? (1)	chosen: +
+('NFKB1', 'MMP9')             + (20), - (2), ? (2)	chosen: +
+('NFKB1', 'MYC')              + (1), - (1), ? (1)	chosen: -
+('NFKB1', 'NFKBIA')           + (1), - (1), ? (1)	chosen: -
+('NFKB1', 'PTEN')             + (2), - (1), ? (1)	chosen: +
+('NFKB1', 'PTGS2')            + (14), - (2), ? (2)	chosen: +
+('NFKB1', 'SERPINE1')         + (2), - (1), ? (1)	chosen: +
+('NFKB1', 'TLR3')             + (1), - (1), ? (1)	chosen: -
+('NFKB1', 'TNFSF10')          + (2), - (1), ? (1)	chosen: +
+('NFKB1', 'TRAF2')            + (1), - (1), ? (1)	chosen: +
+('NFKB1', 'VEGFA')            + (4), - (1), ? (1)	chosen: +
+('NFKB1', 'XIAP')             + (4), - (2), ? (2)	chosen: +
+('NFKBIA', 'NFKB1')           + (1), - (3), ? (3)	chosen: -
+('NFKBIA', 'RELA')            + (1), - (3), ? (3)	chosen: -
+('NR5A1', 'CYP19A1')          + (2), - (1), ? (1)	chosen: +
+('NR5A1', 'STAR')             + (1), - (1), ? (1)	chosen: +
+('PARP1', 'THBD')             + (1), - (1), ? (1)	chosen: +
+('PAX3', 'MITF')              + (2), - (1), ? (1)	chosen: +
+('PAX5', 'TP53')              + (1), - (1), ? (1)	chosen: +
+('PCGF2', 'HOXA7')            + (1), - (1), ? (1)	chosen: +
+('POU2F1', 'VWF')             + (1), - (1), ? (1)	chosen: -
+('PPARA', 'APOB')             + (1), - (1), ? (1)	chosen: +
+('PPARG', 'BCL2')             + (1), - (1), ? (1)	chosen: -
+('PPARG', 'CIITA')            + (1), - (2), ? (2)	chosen: -
+('PPARG', 'ERP44')            + (1), - (1), ? (1)	chosen: +
+('PPARG', 'PTGS2')            + (1), - (3), ? (3)	chosen: -
+('PPARG', 'RETN')             + (1), - (1), ? (1)	chosen: -
+('RB1', 'CDKN1A')             + (1), - (1), ? (1)	chosen: -
+('RELA', 'BCL2')              + (5), - (3), ? (3)	chosen: +
+('RELA', 'BCL2L1')            + (9), - (1), ? (1)	chosen: +
+('RELA', 'BIRC2')             + (2), - (1), ? (1)	chosen: +
+('RELA', 'BIRC3')             + (5), - (3), ? (3)	chosen: +
+('RELA', 'CCND1')             + (9), - (1), ? (1)	chosen: +
+('RELA', 'CDKN1A')            + (1), - (1), ? (1)	chosen: -
+('RELA', 'CFLAR')             + (2), - (1), ? (1)	chosen: +
+('RELA', 'CXCL8')             + (18), - (2), ? (2)	chosen: +
+('RELA', 'FAS')               + (2), - (1), ? (1)	chosen: +
+('RELA', 'IL6')               + (23), - (1), ? (1)	chosen: +
+('RELA', 'MCL1')              + (1), - (1), ? (1)	chosen: +
+('RELA', 'MMP9')              + (21), - (3), ? (3)	chosen: +
+('RELA', 'MYC')               + (1), - (1), ? (1)	chosen: +
+('RELA', 'NFKBIA')            + (1), - (1), ? (1)	chosen: +
+('RELA', 'PTEN')              + (2), - (1), ? (1)	chosen: +
+('RELA', 'PTGS2')             + (14), - (2), ? (2)	chosen: +
+('RELA', 'SERPINE1')          + (2), - (1), ? (1)	chosen: +
+('RELA', 'TLR3')              + (1), - (1), ? (1)	chosen: +
+('RELA', 'TNFSF10')           + (2), - (1), ? (1)	chosen: +
+('RELA', 'TRAF2')             + (1), - (1), ? (1)	chosen: -
+('RELA', 'VEGFA')             + (4), - (1), ? (1)	chosen: +
+('RELA', 'XIAP')              + (3), - (2), ? (2)	chosen: +
+('RUNX1', 'PF4')              + (1), - (1), ? (1)	chosen: +
+('RUNX2', 'IBSP')             + (1), - (1), ? (1)	chosen: +
+('SOX10', 'GJB1')             + (1), - (2), ? (2)	chosen: -
+('SOX10', 'MITF')             + (2), - (1), ? (1)	chosen: +
+('SOX2', 'PAX6')              + (1), - (1), ? (1)	chosen: -
+('SOX9', 'CDK4')              + (1), - (1), ? (1)	chosen: +
+('SOX9', 'CDKN1A')            + (2), - (1), ? (1)	chosen: +
+('SOX9', 'COL2A1')            + (1), - (1), ? (1)	chosen: -
+('SP1', 'AGTR1')              + (1), - (1), ? (1)	chosen: -
+('SP1', 'CDKN1A')             + (8), - (1), ? (1)	chosen: +
+('SP1', 'COL2A1')             + (2), - (1), ? (1)	chosen: +
+('SP1', 'DNMT1')              + (2), - (1), ? (1)	chosen: +
+('SP1', 'HSD17B2')            + (2), - (1), ? (1)	chosen: +
+('SP1', 'POR')                + (1), - (1), ? (1)	chosen: -
+('SP1', 'SOD1')               + (2), - (1), ? (1)	chosen: +
+('SP1', 'TNF')                + (2), - (1), ? (1)	chosen: +
+('SP1', 'VEGFA')              + (8), - (1), ? (1)	chosen: +
+('SP3', 'CDKN1A')             + (1), - (1), ? (1)	chosen: -
+('SP3', 'COL2A1')             + (1), - (1), ? (1)	chosen: -
+('SP3', 'KDR')                + (1), - (1), ? (1)	chosen: -
+('SP4', 'KDR')                + (1), - (1), ? (1)	chosen: -
+('STAT1', 'CFTR')             + (1), - (1), ? (1)	chosen: -
+('STAT1', 'IFNG')             + (1), - (2), ? (2)	chosen: -
+('STAT1', 'IRF1')             + (4), - (1), ? (1)	chosen: +
+('STAT3', 'BCL2')             + (6), - (1), ? (1)	chosen: +
+('STAT3', 'BCL2L1')           + (7), - (1), ? (1)	chosen: +
+('STAT3', 'CCND1')            + (5), - (2), ? (2)	chosen: +
+('STAT3', 'FAS')              + (1), - (2), ? (2)	chosen: -
+('STAT3', 'IL6')              + (5), - (1), ? (1)	chosen: +
+('STAT3', 'MCL1')             + (5), - (1), ? (1)	chosen: +
+('STAT3', 'MMP2')             + (3), - (1), ? (1)	chosen: +
+('STAT3', 'MMP7')             + (1), - (1), ? (1)	chosen: -
+('STAT3', 'MMP9')             + (1), - (1), ? (1)	chosen: -
+('STAT3', 'MYC')              + (3), - (2), ? (2)	chosen: +
+('STAT3', 'VEGFA')            + (9), - (3), ? (3)	chosen: +
+('STAT6', 'CCL11')            + (1), - (1), ? (1)	chosen: -
+('TCF3', 'MYC')               + (1), - (1), ? (1)	chosen: +
+('TFAP2A', 'CDH1')            + (1), - (1), ? (1)	chosen: -
+('TFAP2A', 'CDKN1A')          + (1), - (1), ? (1)	chosen: -
+('TFAP2A', 'MMP9')            + (1), - (1), ? (1)	chosen: +
+('TP53', 'CDKN1A')            + (27), - (3), ? (3)	chosen: +
+('TP53', 'DDB1')              + (1), - (1), ? (1)	chosen: -
+('TP53', 'DNMT1')             + (1), - (2), ? (2)	chosen: -
+('TP53', 'EZH2')              + (1), - (2), ? (2)	chosen: -
+('TP53', 'GADD45A')           + (1), - (2), ? (2)	chosen: -
+('TP53', 'PTTG1')             + (1), - (1), ? (1)	chosen: -
+('TP53', 'VEGFA')             + (1), - (1), ? (1)	chosen: -
+('USF1', 'PTGDS')             + (1), - (1), ? (1)	chosen: +
+('VDR', 'CYP24A1')            + (1), - (1), ? (1)	chosen: +
+('VDR', 'IGFBP3')             + (1), - (1), ? (1)	chosen: -
+('VHL', 'VEGFA')              + (3), - (5), ? (5)	chosen: -
+('WT1', 'THBS1')              + (1), - (1), ? (1)	chosen: +
+('YBX1', 'ABCB1')             + (1), - (1), ? (1)	chosen: -
+('YY1', 'IFNG')               + (1), - (1), ? (1)	chosen: +
+('YY1', 'MYC')                + (1), - (1), ? (1)	chosen: -
+('YY1', 'TNFRSF10B')          + (1), - (3), ? (3)	chosen: -
+('YY1', 'TP53')               + (2), - (1), ? (1)	chosen: +
+('ZBTB7A', 'NFATC1')          + (1), - (1), ? (1)	chosen: -
+('ZEB1', 'CDH1')              + (1), - (2), ? (2)	chosen: -
+('ZFP36', 'HIF1A')            + (1), - (1), ? (1)	chosen: +
+====================================
+
+The Human-TRRUST.txt file was obtained by running $util/network_stats/src/extract_larget_component.py on Human-TRRUST_extracted.txt 
+Here is the output of extract_larget_component.py
+
+########################################  Human-TRRUST_extracted.txt (directed) ########################################
+
+WARNING from init.py: found 178 bidirectional edges, here is the first few:
+('HDAC2', 'MYCN')
+('HDAC2', 'MYC')
+('IRF4', 'BCL6')
+('TGIF1', 'SOX3')
+('MYCN', 'HDAC2')
+
+
+WARNING from init.py: found 26 self-loops, here is one of them: ('SALL4', 'SALL4')
+
+no. connected components: 21
+component sizes: [2676, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1]
+M.nodes() before              2718
+M.edges() before              8015
+len(delete_nodes):            42
+len(set(delete_nodes)):       42
+M.nodes() after               2676
+M.edges() after               7992
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Human/TRRUST/input/Human-TRRUST_directed_largest_component.txt
+
+####################################################################################################################
+
+
+
+reference:
+TRRUST: A reference database of human transcriptional regulatory interactions. Scientific Reports 5:11432 12 Jun, 2015
+https://www.ncbi.nlm.nih.gov/pubmed/?term=26066708

@@ -1,0 +1,38 @@
+
+The original network was downloaded from (GM12878 cell lines):
+
+http://encodenets.gersteinlab.org/enets8.GM_proximal_filtered_network.txt 
+
+The only modification to the original file is to add a first line (column header) "source target"
+
+Human-ENCODE-GM.txt was obtained by running $util/network_stats/src/extract_larget_component.py on enets8.GM_proximal_filtered_network.txt 
+Here is the output of extract_larget_component.py
+
+########################################  Human-ENCODE-GM.txt (directed) ########################################
+
+WARNING from init.py: found (and ignored) 1168 duplicate edges, here is some of them: 
+
+CTCF                     AAAS                     
+CTCF                     AAAS                     
+CTCF                     AARS2                    
+CTCF                     AARS2                    
+CTCF                     ABCA17P                  
+
+WARNING from init.py: found 6 self-loops, here is one of them: ('MEF2A', 'MEF2A')
+
+no. connected components: 1
+component sizes: [3989]
+M.nodes() before              3989
+M.edges() before              6971
+len(delete_nodes):            0
+len(set(delete_nodes)):       0
+M.nodes() after               3989
+M.edges() after               6971
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Human/ENCODE-GM/input/Human-ENCODE-GM_directed_largest_component.txt
+
+####################################################################################################################
+
+reference:
+Gerstein, Mark B., et al. "Architecture of the human regulatory network derived from ENCODE data." Nature 489.7414 (2012): 91-100. 
+http://www.nature.com/nature/journal/v489/n7414/abs/nature11245.html

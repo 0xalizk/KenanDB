@@ -1,0 +1,34 @@
+Yeast Y2H, both direction and signs randomized by me: 
+article: "High Quality Binary Protein Interaction Map of the Yeast Interactome Network"
+link: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2746753/
+link2: http://science.sciencemag.org/content/322/5898/104.long
+
+
+This network is from Y2H assay in the above paper ( CCSB-YI1 ) plust two previous (high quality) Y2H datasets (Uetz-screen + Ito-core)
+
+Uetz-screen reference: https://www.ncbi.nlm.nih.gov/pubmed/11283351
+Ito-core reference: https://www.ncbi.nlm.nih.gov/pubmed/11283351
+
+-------------------------------------------------------------------------------------------------------------------
+Y2H_union.txt        = original network downloaded from http://interactome.dfci.harvard.edu/S_cerevisiae/index.php?page=download
+Y2H_union_clean.txt  = I just added column headings "source" and "target"
+Yeast.txt            = the result of running $util/network_stats/extract_largest_component.py on Y2H_union_clean.txt
+
+                        extract_largest_component.py output:
+						########################################  Y2H_union_clean.txt  ########################################
+
+						WARNING from init.py: found 225 self-loops, here is one of them: ('YGL153W', 'YGL153W')
+
+						*************** The edges in the newly created largest component will be RANDOMIZED (change randomize_edge_direction=False if you want otherwise) *********
+						*************** This is because I'm assuming the network is undirected unless otherwise specified *********
+
+						no. connected components: 185
+						component sizes: [1647, 6, 5, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+						M.nodes() before              2018
+						M.edges() before              2930
+						len(delete_nodes):            371
+						len(set(delete_nodes)):       371
+						M.nodes() after               1647
+						M.edges() after               2682
+						[mosha@colosse3 network_stats]$ 
+-------------------------------------------------------------------------------------------------------------------

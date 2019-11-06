@@ -1,0 +1,61 @@
+
+mmc3.txt          = original Table S2 in "Widespread Expansion of Protein Interaction Capabilities by Alternative Splicing" http://www.sciencedirect.com/science/article/pii/S0092867416300435
+mmc3_clean.txt    = 1043 interactions (rows) taken from sheet "2B-Isoform PPIs" Yang_et_al_isoform_profile.xlsx, after filtering out rows with 'negative' and 'N/A' interactions', and irrelevant columns except:  Isoform_ID (=interactor A), Interactor_Symbol.
+                    Notice that his results in duplicate edges since some tests were done against the same interactor but in different ORFs (notice Interactor_ID column)
+                    1043-47 = 996 unique interactions (considering same-interactor/different-ORFs = same interactor; there are 47 of those)
+HumanIso.txt      =  result of applying python $util/network_stats/extract_largest_component.py mmc3_clean.txt
+                        
+                        extract_largest_component.py output:
+						########################################  mmc3_clean.txt  ########################################
+
+						WARNING from init.py: found (and ignored) 47 duplicate edges, here is the first 5 i found: 
+
+						EGR2_3                   GOLGA2                   1
+						PRMT2_3                  ZNF341                   1
+						KRT6A_2                  GOLGA2                   1
+						NDN_2                    SSX2IP                   1
+						PLP1_1                   CREB3L1                  1
+						*************** The edges in the newly created largest component will be RANDOMIZED (change randomize_edge_direction=False if you want otherwise) *********
+						*************** This is because I'm assuming the network is undirected unless otherwise specified *********
+
+						no. connected components: 53
+						component sizes: [473, 13, 11, 6, 6, 5, 5, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+						M.nodes() before              629
+						M.edges() before              996
+						len(delete_nodes):            156
+						len(set(delete_nodes)):       156
+						M.nodes() after               473
+						M.edges() after               885
+						malsha17@yamaska ~/EvoByCompSel/parallel/Release-03/src/utilities/network_stats $ 
+
+
+from the text ( the 1043 interactions mentioned here = no. of positives in  Isoform_ID #  Interactor_ID (i.e. 1 gene in 2 different ORFs  is counted twice):
+"In total, we obtained high-quality PPI profiles for 366 protein isoforms encoded by 161 genes (Figure 2D and Table S2B). 
+While 118 isoforms returned no binary PPIs, 248 isoforms had one or more interactions for a total of 1,043 binary PPIs with 381 proteins. "
+
+
+
+This paper is interesting because you have protein-protein-interactions and you have isoform-protein interactions.
+This can show whether network topology changes drastically if each node represents a certain protein isoform (one of many possible
+alternatively-spliced isoform of the protein), rather than a protein. This should affect hubs. 
+The network information is in Table S2B. 
+
+
+This is from the text:
+
+"First we performed yeast two-hybrid (Y2H) screens in which all protein isoforms, fused to the Gal4 DNA binding domain (DB), 
+were tested against proteins encoded by the hORFeome v5.1 collection of ∼15,000 ORF clones fused to the Gal4 activation domain 
+(AD) (Dreze et al., 2010, Rolland et al., 2014 and Rual et al., 2005). Following first-pass screening, each protein isoform was 
+pairwise tested for interaction with the candidate partners identified not only for itself but also for all first-pass partners
+ of all other protein isoforms encoded by the same gene, thus minimizing biases due to incomplete sampling sensitivity 
+ (Venkatesan et al., 2009). To generate a final dataset of verified Y2H pairs, pairs showing a positive result in at 
+ least two out of the three pairwise tests were subjected to a fourth pairwise retest, and PCR products amplified from 
+ the final positive pairs were sequenced to confirm the identity of clones encoding each interacting protein 
+ (Figure 2A and Table S2B). Western blots were performed for all protein isoforms of a subset of randomly picked genes, 
+ demonstrating comparable heterologous protein expression of all isoforms of the same gene tested by Y2H (Figures 2B and S2A–S2H). 
+ Finally, to validate the overall quality of the PPI dataset of human protein pairs identified by Y2H, we selected a representative 
+ sample of the isoform-partner interacting and non-interacting pairs and subjected them to orthogonal validation in human HEK293T 
+ cells using a protein complementation assay (PCA) (Dreze et al., 2010 and Rolland et al., 2014) (Figure 2C; Table S2C). 
+ The isoform-partner positive pairs were recovered at a rate similar to that seen for pairs from a well-described positive 
+ reference set (PRS) (Venkatesan et al., 2009), while isoform-partner negative pairs validated at a rate similar to that seen 
+ for pairs from a random reference set (RRS) (Figure 2C and Tables S2C and S2D)."

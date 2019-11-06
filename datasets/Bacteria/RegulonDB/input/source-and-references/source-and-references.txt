@@ -1,0 +1,48 @@
+
+The network file Bacteria-RegulonDB.txt contains regulatory interactions that meet the following criteria:
+
+(1) Experimentally-validated (as opposed to computationally-predicted) (http://regulondb.ccg.unam.mx)
+(2) Have "Strong" or "Confirmed" evidence (as opposed to Weak)
+(3) Randomized +/- interaction effect (promotional/inhibitory) in cases where the RegulonDB designates it as "?" (unknown) or +/- (dual)
+(4) Interactions are between transcription factor (TF)-Gene, TF-TF (non of small RNA (sRNA) -Gene interactions have "Strong" or "Confirmed" evidence so there were excluded, see http://regulondb.ccg.unam.mx/menu/download/datasets/files/sRNABindingSiteSet.txt)
+(5) Interactions involving Sigma proteins are not included since they are very common to all transcriptions and therefore do not in and of themselves control the combinatorial regulatory state of the organism.
+(6) In cases where an interaction was reported more than once (we found 317 duplicates out of 1967 ==> no. unique interactions = 1650), and the reported sign doesn't agree, the sign is randomized with more likelihood proportional to the number of times it was reported (e.g. if a reaction was reported four times and the signs were [+ + + -] were reproted, a '+' is chosen with  75% chance (see output/interactios_with_multiple_reported_signs.txt)
+
+The files "input/network_tf_gene.txt" and "input/network_tf_tf" were downloaded from http://regulondb.ccg.unam.mx on June 16 2017. The last column in each file is used to filter in interactions with "Confirmed" or "Strong" evidence. 
+
+The three RegulonDB files were processed by running "python parser.py" which extracts all interactions meeting the above (1)-(4) criteria, and produceds "processed/Bacteria-RegulonDB_extracted.txt". Gene identifiers were all transformed into lower case to avoid possible duplication as a result of mixed capitalization in the source file.
+
+The output of parser.py is as follows:
+		raw/network_tf_gene.txt:     1753  interactions
+		raw/network_tf_tf.txt:       214   interactions
+
+		Overall: 1967  interactions, 317 of which are duplicates
+
+Finally, the file Bacteria-RegulonDB.txt was obtained by running $util/network_stats/src/extract_largest_component.py on processed/Bacteria-RegulonDB_extracted.txt", this is the output of that script:
+########################################  Bacteria-RegulonDB.txt (directed) ########################################
+
+WARNING from init.py: found 4 bidirectional edges, here is the first few:
+('ROB', 'MARA')
+('MARA', 'ROB')
+('CRP', 'FIS')
+('FIS', 'CRP')
+
+
+WARNING from init.py: found 60 self-loops, here is one of them: ('CHBR', 'CHBR')
+
+no. connected components: 46
+component sizes: [898, 12, 11, 8, 8, 7, 6, 6, 6, 6, 6, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1]
+M.nodes() before              1082
+M.edges() before              1650
+len(delete_nodes):            184
+len(set(delete_nodes)):       184
+M.nodes() after               898
+M.edges() after               1481
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Bacteria/RegulonDB/input/Bacteria-RegulonDB_directed_largest_component.txt
+##########################################################################################################################
+
+reference:
+Gama-Castro, Socorro, et al. "RegulonDB version 9.0: high-level integration of gene regulation, coexpression, motif clustering and beyond." Nucleic acids research 44.D1 (2015): D133-D143.
+
+

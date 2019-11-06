@@ -1,0 +1,38 @@
+
+The original network was downloaded from:
+
+http://encodenets.gersteinlab.org/enets2.Proximal_filtered.txt 
+
+The only modification to the original file is to add a first line (column header) "source target", and remove "proximal_filtered " column
+
+Human-ENCODE-Proximal.txt was obtained by running $util/network_stats/src/extract_larget_component.py on enets2.Proximal_filtered.txt 
+Here is the output of extract_larget_component.py
+
+########################################  Human-ENCODE-Proximal.txt (directed) ########################################
+
+WARNING from init.py: found 12 bidirectional edges, here is the first few:
+('STAT2', 'STAT1')
+('GTF2B', 'EGR1')
+('EGR1', 'JUND')
+('EGR1', 'GTF2B')
+('SP2', 'SP1')
+
+
+WARNING from init.py: found 27 self-loops, here is one of them: ('STAT2', 'STAT2')
+
+no. connected components: 1
+component sizes: [9057]
+M.nodes() before              9057
+M.edges() before              26070
+len(delete_nodes):            0
+len(set(delete_nodes)):       0
+M.nodes() after               9057
+M.edges() after               26070
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Human/ENCODE-Proximal/input/Human-ENCODE-Proximal_directed_largest_component.txt
+
+####################################################################################################################
+
+reference:
+Gerstein, Mark B., et al. "Architecture of the human regulatory network derived from ENCODE data." Nature 489.7414 (2012): 91-100. 
+http://www.nature.com/nature/journal/v489/n7414/abs/nature11245.html

@@ -1,0 +1,12 @@
+
+
+
+see /Human/BioGrid/source-and-references for details
+
+
+reference:
+Chatr-aryamontri, Andrew, et al. "The BioGRID interaction database: 2017 update." Nucleic Acids Research (2016): gkw1102.
+https://academic.oup.com/nar/article/45/D1/D369/2681732/The-BioGRID-interaction-database-2017-update
+
+
+

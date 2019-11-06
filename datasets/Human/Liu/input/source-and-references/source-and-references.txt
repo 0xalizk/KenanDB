@@ -1,0 +1,107 @@
+The human_export_Thu_Jun_15_04_41_14_UTC_2017.csv was obtained by searching http://www.regnetworkweb.org/search.jsp with the following criteria:
+
+	Types = all
+	Organism = Human
+	Evidence = experimental
+	Confidence = High
+	Database = all
+
+The mouse_export_Thu_Jun_15_04_42_58_UTC_2017.csv was obtained by searching http://www.regnetworkweb.org/search.jsp with the following criteria:
+
+	Types = all
+	Organism = Mouse
+	Evidence = experimental
+	Confidence = High
+	Database = all
+
+
+the parsing-script/parse.py extracts 'regulator_symbol' and 'target_symbol' columns
+
+
+STATS (output of parse.py): 
+===============================================================================================
+========================================= Human ===============================================
+===============================================================================================
+
+9727       interactions, 	number of duplicate interactions = 104
+
+9727 total interactions
+104 duplicates
+9623 unique interactions
+3529 unique genes
+The most duplicated interactions:
+	9519       interactions are duplicated 	0 	 times 
+	104        interactions are duplicated 	1 	 times 
+
+Databases: ['hprd:527(5.48 %)', 'ensembl:463(4.81 %)', 'kegg:1949(20.25 %)', 'tred:5850(60.79 %)', 'database:1(0.01 %)', 'ucsc:448(4.66 %)', 'transmir:489(5.08 %)']
+=================================================================================================
+========================================  Mouse =================================================
+=================================================================================================
+3698       interactions, 	number of duplicate interactions = 0
+
+3698 total interactions
+0 duplicates
+3698 unique interactions
+1470 unique genes
+The most duplicated interactions:
+	3698       interactions are duplicated 	0 	 times 
+
+Databases: ['ucsc:112(3.03 %)', 'kegg:1433(38.75 %)', 'tred:2097(56.71 %)', 'database:1(0.03 %)', 'ensembl:19(0.51 %)', 'transmir:36(0.97 %)']
+====================================================================================================
+
+
+Human-Liu.txt and Mouse-Liu.txt were obtained by running $util/network_stats/src/extract_larget_component.py on Human-Liu_extracted.txt and Mouse-Liu_extracted.txt
+Here is the output of extract_larget_component.py
+
+########################################  Human-Liu_extracted.txt (directed) ########################################
+
+WARNING from init.py: found 752 bidirectional edges, here is the first few:
+('RUVBL1', 'TCF7')
+('RUVBL1', 'LEF1')
+('RUVBL1', 'TCF7L2')
+('RUVBL1', 'CTNNB1')
+('RUVBL1', 'TCF7L1')
+
+
+WARNING from init.py: found 24 self-loops, here is one of them: ('E2F1', 'E2F1')
+
+no. connected components: 11
+component sizes: [3502, 8, 3, 2, 2, 2, 2, 2, 2, 2, 2]
+M.nodes() before              3529
+M.edges() before              9623
+len(delete_nodes):            27
+len(set(delete_nodes)):       27
+M.nodes() after               3502
+M.edges() after               9606
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Human/Liu/input/Human-Liu_directed_largest_component.txt
+
+########################################  Mouse-Liu_extracted.txt (directed) ########################################
+
+WARNING from init.py: found 14 bidirectional edges, here is the first few:
+('PAX2', 'WT1')
+('TRP53', 'BBC3')
+('GLI2', 'GLI3')
+('GLI2', 'GLI1')
+('ARNTL', 'NR1D1')
+
+
+WARNING from init.py: found 14 self-loops, here is one of them: ('E2F1', 'E2F1')
+
+no. connected components: 10
+component sizes: [1436, 16, 3, 3, 2, 2, 2, 2, 2, 2]
+M.nodes() before              1470
+M.edges() before              3698
+len(delete_nodes):            34
+len(set(delete_nodes)):       34
+M.nodes() after               1436
+M.edges() after               3673
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Mouse/Liu/input/Mouse-Liu_directed_largest_component.txt
+
+
+####################################################################################################################
+
+
+references:
+Liu, Zhi-Ping, et al. "RegNetwork: an integrated database of transcriptional and post-transcriptional regulatory networks in human and mouse." Database 2015 (2015): bav095.

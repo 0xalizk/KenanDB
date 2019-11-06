@@ -1,0 +1,140 @@
+
+
+Download BIOGRID-MV-Physical-3.4.149.tab2.zip from https://thebiogrid.org/download.php on Jun 14 2017.
+
+The interactions in BIOGRID-MV-Physical-3.4.149.tab2.zip are (1) physical and (2) Multi-validated (MV), as described here: https://wiki.thebiogrid.org/doku.php/biogrid_mv
+
+Interactions in BIOGRID-MV-Physical-3.4.149.tab2.zip are treated as undirected, therefore two rows 
+where "Entrez Gene Interactor A" = x and "Entrez Gene Interactor B" = y is considered the same interaction as a row 
+where "Entrez Gene Interactor A" = y and "Entrez Gene Interactor B" = x
+
+
+Only interactions where where both interactors are from the same organism are considered (see the Python script parsing_script/parsing_script.py).
+
+For Human and Yeast, only interactions validated (reported) 4 and 3 times, respectively, are considered. Because the number of
+interactions for these two organisms is large, it was possible to to impose this stringent selection criteria while still
+obtaining a large representative network. 
+
+
+Finally The resulting networks (parsing_script/XXXX_BioGrid_extracted.txt) were fed to $util/network_stats/src/extract_largest_components.py to produce the final network files: Human-BioGrid.txt, Yeast-BioGrid.txt, and Plant-BioGrid.txt
+The output of of extract_larget_component.py is as follows:
+
+########################################  Human-BioGrid.txt (undirected) ########################################
+
+WARNING from init.py: found (and ignored) 6053 duplicate edges, here is some of them: 
+
+131118                   51025                    
+1499                     51564                    
+672                      29117                    
+3054                     55145                    
+10401                    83637                    
+
+WARNING from init.py: found 154 self-loops, here is one of them: ('9878', '9878')
+
+*************** The edges in the newly created largest component will be RANDOMIZED (change undirected=False if you want otherwise) *********
+*************** This is because I'm assuming the network is undirected unless otherwise specified *********
+
+no. connected components: 103
+component sizes: [3436, 7, 5, 5, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+M.nodes() before              3666
+M.edges() before              8404
+len(delete_nodes):            230
+len(set(delete_nodes)):       230
+M.nodes() after               3436
+M.edges() after               8254
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Human/BioGrid/input/Human-BioGrid_undirected_largest_component.txt
+
+########################################  Mouse-BioGrid.txt (undirected) ########################################
+
+WARNING from init.py: found 45 self-loops, here is one of them: ('66824', '66824')
+
+*************** The edges in the newly created largest component will be RANDOMIZED (change undirected=False if you want otherwise) *********
+*************** This is because I'm assuming the network is undirected unless otherwise specified *********
+
+no. connected components: 168
+component sizes: [1031, 11, 9, 7, 7, 7, 6, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1]
+M.nodes() before              1453
+M.edges() before              1773
+len(delete_nodes):            422
+len(set(delete_nodes)):       422
+M.nodes() after               1031
+M.edges() after               1497
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Mouse/BioGrid/input/Mouse-BioGrid_undirected_largest_component.txt
+
+########################################  Plant-BioGrid.txt (directed) ########################################
+
+WARNING from init.py: found 215 self-loops, here is one of them: ('839268', '839268')
+
+no. connected components: 258
+component sizes: [1565, 18, 16, 15, 13, 9, 9, 9, 9, 8, 8, 8, 8, 8, 8, 7, 7, 7, 7, 6, 6, 6, 6, 6, 6, 6, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+M.nodes() before              2278
+M.edges() before              3387
+len(delete_nodes):            713
+len(set(delete_nodes)):       713
+M.nodes() after               1565
+M.edges() after               2745
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Plant/BioGrid/input/Plant-BioGrid_directed_largest_component.txt
+
+########################################  Worm-BioGrid.txt (undirected) ########################################
+
+WARNING from init.py: found 36 self-loops, here is one of them: ('177336', '177336')
+
+*************** The edges in the newly created largest component will be RANDOMIZED (change undirected=False if you want otherwise) *********
+*************** This is because I'm assuming the network is undirected unless otherwise specified *********
+
+no. connected components: 108
+component sizes: [55, 25, 15, 15, 13, 9, 8, 7, 7, 6, 5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+M.nodes() before              384
+M.edges() before              329
+len(delete_nodes):            329
+len(set(delete_nodes)):       329
+M.nodes() after               55
+M.edges() after               64
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Worm/BioGrid/input/Worm-BioGrid_undirected_largest_component.txt
+
+########################################  Yeast-BioGrid.txt (undirected) ########################################
+
+WARNING from init.py: found 295 self-loops, here is one of them: ('853017', '853017')
+
+*************** The edges in the newly created largest component will be RANDOMIZED (change undirected=False if you want otherwise) *********
+*************** This is because I'm assuming the network is undirected unless otherwise specified *********
+
+no. connected components: 172
+component sizes: [2418, 22, 13, 12, 9, 9, 7, 6, 6, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+M.nodes() before              2826
+M.edges() before              8031
+len(delete_nodes):            408
+len(set(delete_nodes)):       408
+M.nodes() after               2418
+M.edges() after               7668
+
+written: /home/mcb/malsha17/EvoByCompSel/parallel/Release-03/data/final/Yeast/BioGrid/input/Yeast-BioGrid_undirected_largest_component.txt
+
+####################################################################################################################
+
+
+
+Note the following stats about BIOGRID-MV-Physical-3.4.149.tab2.zip 
+
+name....................................TaxID.........Number of interactions (with duplicates) in BIOGRID-MV-Physical-3.4.149.tab2.zip
+======================================================================================================================================
+Homo Sapiens (Human).....................9606..........................121649 					
+Arabidopsis thaliana (Plant).............3702..........................9713  					
+Caenorhabditis elegans (Worm)............6239..........................812  					
+Drosophila melanogaster (Fly)............7227..........................1633  					
+Mus musculus (Mouse).....................10090.........................5035  					
+Saccharomyces cerevisiae S288C(Yeast)....559292........................60271  					  
+
+* TaxID is taken from: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi
+
+
+reference:
+Chatr-aryamontri, Andrew, et al. "The BioGRID interaction database: 2017 update." Nucleic Acids Research (2016): gkw1102.
+https://academic.oup.com/nar/article/45/D1/D369/2681732/The-BioGRID-interaction-database-2017-update
+
+
+

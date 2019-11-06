@@ -1,0 +1,320 @@
+malsha17@yamaska ~/EvoByCompSel/parallel/Release-03/src/utilities/network_stats $ python src/network_stats.py input_files/network_stats.input 
+=====================================================================================================================
+                                        Human-BioGrid.txt (undirected)                                           
+=====================================================================================================================
+
+WARNING from init.py: found 231 self-loops, here is one of them: ('2104', '2104')
+
+
+
+Nodes                  4219
+Edges                    9551
+Promotional edges        50.361 %
+Inhibitory edges         49.639 %
+max(in degree)           80
+max(ou degree)           85
+max(   degree)           165
+Average degree = 4.52761317848
+Average set(degree) = 37.5483870968
+no. connected components: 230
+component sizes: [3609, 22, 14, 13, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+Nodes of degree: 1    1525  nodes  (commulative 1525 nodes)              ==>   36.146   %   (commulative = 36.14600616259777 %)
+Nodes of degree: 2    770   nodes  (commulative 2295 nodes)              ==>   18.2508  %   (commulative = 54.39677648731927 %)
+Nodes of degree: 3    485   nodes  (commulative 2780 nodes)              ==>   11.4956  %   (commulative = 65.89239156198151 %)
+Nodes of degree: 4    313   nodes  (commulative 3093 nodes)              ==>   7.4188   %   (commulative = 73.31121118748518 %)
+Nodes of degree: 5    234   nodes  (commulative 3327 nodes)              ==>   5.5463   %   (commulative = 78.85754918227067 %)
+Nodes of degree: 6    147   nodes  (commulative 3474 nodes)              ==>   3.4842   %   (commulative = 82.34178715335386 %)
+Nodes of degree: 7    108   nodes  (commulative 3582 nodes)              ==>   2.5598   %   (commulative = 84.90163545863948 %)
+Nodes of degree: 8    119   nodes  (commulative 3701 nodes)              ==>   2.8206   %   (commulative = 87.72220905427825 %)
+Nodes of degree: 9    68    nodes  (commulative 3769 nodes)              ==>   1.6118   %   (commulative = 89.33396539464327 %)
+Nodes of degree: 10   55    nodes  (commulative 3824 nodes)              ==>   1.3036   %   (commulative = 90.6375918464091 %)
+Nodes of degree: 11   48    nodes  (commulative 3872 nodes)              ==>   1.1377   %   (commulative = 91.77530220431382 %)
+Nodes of degree: 12   53    nodes  (commulative 3925 nodes)              ==>   1.2562   %   (commulative = 93.03152405783361 %)
+Nodes of degree: 13   23    nodes  (commulative 3948 nodes)              ==>   0.5452   %   (commulative = 93.57667693766295 %)
+Nodes of degree: 14   27    nodes  (commulative 3975 nodes)              ==>   0.64     %   (commulative = 94.21663901398436 %)
+Nodes of degree: 15   25    nodes  (commulative 4000 nodes)              ==>   0.5926   %   (commulative = 94.80919649205974 %)
+Nodes of degree: 16   27    nodes  (commulative 4027 nodes)              ==>   0.64     %   (commulative = 95.44915856838115 %)
+Nodes of degree: 17   17    nodes  (commulative 4044 nodes)              ==>   0.4029   %   (commulative = 95.8520976534724 %)
+Nodes of degree: 18   24    nodes  (commulative 4068 nodes)              ==>   0.5689   %   (commulative = 96.42095283242476 %)
+Nodes of degree: 19   13    nodes  (commulative 4081 nodes)              ==>   0.3081   %   (commulative = 96.72908272102396 %)
+Nodes of degree: 20   9     nodes  (commulative 4090 nodes)              ==>   0.2133   %   (commulative = 96.94240341313109 %)
+Nodes of degree: 21   10    nodes  (commulative 4100 nodes)              ==>   0.237    %   (commulative = 97.17942640436124 %)
+Nodes of degree: 22   5     nodes  (commulative 4105 nodes)              ==>   0.1185   %   (commulative = 97.29793789997632 %)
+Nodes of degree: 23   12    nodes  (commulative 4117 nodes)              ==>   0.2844   %   (commulative = 97.5823654894525 %)
+Nodes of degree: 24   12    nodes  (commulative 4129 nodes)              ==>   0.2844   %   (commulative = 97.86679307892868 %)
+Nodes of degree: 25   11    nodes  (commulative 4140 nodes)              ==>   0.2607   %   (commulative = 98.12751836928184 %)
+Nodes of degree: 26   4     nodes  (commulative 4144 nodes)              ==>   0.0948   %   (commulative = 98.22232756577391 %)
+Nodes of degree: 27   2     nodes  (commulative 4146 nodes)              ==>   0.0474   %   (commulative = 98.26973216401994 %)
+Nodes of degree: 28   6     nodes  (commulative 4152 nodes)              ==>   0.1422   %   (commulative = 98.41194595875803 %)
+Nodes of degree: 29   2     nodes  (commulative 4154 nodes)              ==>   0.0474   %   (commulative = 98.45935055700406 %)
+Nodes of degree: 30   6     nodes  (commulative 4160 nodes)              ==>   0.1422   %   (commulative = 98.60156435174214 %)
+Nodes of degree: 31   2     nodes  (commulative 4162 nodes)              ==>   0.0474   %   (commulative = 98.64896894998817 %)
+Nodes of degree: 32   6     nodes  (commulative 4168 nodes)              ==>   0.1422   %   (commulative = 98.79118274472626 %)
+Nodes of degree: 33   6     nodes  (commulative 4174 nodes)              ==>   0.1422   %   (commulative = 98.93339653946434 %)
+Nodes of degree: 34   3     nodes  (commulative 4177 nodes)              ==>   0.0711   %   (commulative = 99.00450343683339 %)
+Nodes of degree: 35   3     nodes  (commulative 4180 nodes)              ==>   0.0711   %   (commulative = 99.07561033420244 %)
+Nodes of degree: 36   1     nodes  (commulative 4181 nodes)              ==>   0.0237   %   (commulative = 99.09931263332545 %)
+Nodes of degree: 37   4     nodes  (commulative 4185 nodes)              ==>   0.0948   %   (commulative = 99.19412182981752 %)
+Nodes of degree: 38   2     nodes  (commulative 4187 nodes)              ==>   0.0474   %   (commulative = 99.24152642806355 %)
+Nodes of degree: 39   1     nodes  (commulative 4188 nodes)              ==>   0.0237   %   (commulative = 99.26522872718657 %)
+Nodes of degree: 40   2     nodes  (commulative 4190 nodes)              ==>   0.0474   %   (commulative = 99.3126333254326 %)
+Nodes of degree: 41   1     nodes  (commulative 4191 nodes)              ==>   0.0237   %   (commulative = 99.33633562455562 %)
+Nodes of degree: 43   2     nodes  (commulative 4193 nodes)              ==>   0.0474   %   (commulative = 99.38374022280165 %)
+Nodes of degree: 44   1     nodes  (commulative 4194 nodes)              ==>   0.0237   %   (commulative = 99.40744252192466 %)
+Nodes of degree: 45   2     nodes  (commulative 4196 nodes)              ==>   0.0474   %   (commulative = 99.4548471201707 %)
+Nodes of degree: 47   2     nodes  (commulative 4198 nodes)              ==>   0.0474   %   (commulative = 99.50225171841673 %)
+Nodes of degree: 48   3     nodes  (commulative 4201 nodes)              ==>   0.0711   %   (commulative = 99.57335861578578 %)
+Nodes of degree: 50   1     nodes  (commulative 4202 nodes)              ==>   0.0237   %   (commulative = 99.5970609149088 %)
+Nodes of degree: 51   1     nodes  (commulative 4203 nodes)              ==>   0.0237   %   (commulative = 99.62076321403181 %)
+Nodes of degree: 52   2     nodes  (commulative 4205 nodes)              ==>   0.0474   %   (commulative = 99.66816781227784 %)
+Nodes of degree: 53   1     nodes  (commulative 4206 nodes)              ==>   0.0237   %   (commulative = 99.69187011140086 %)
+Nodes of degree: 54   1     nodes  (commulative 4207 nodes)              ==>   0.0237   %   (commulative = 99.71557241052388 %)
+Nodes of degree: 55   1     nodes  (commulative 4208 nodes)              ==>   0.0237   %   (commulative = 99.73927470964689 %)
+Nodes of degree: 57   1     nodes  (commulative 4209 nodes)              ==>   0.0237   %   (commulative = 99.76297700876991 %)
+Nodes of degree: 60   2     nodes  (commulative 4211 nodes)              ==>   0.0474   %   (commulative = 99.81038160701594 %)
+Nodes of degree: 65   1     nodes  (commulative 4212 nodes)              ==>   0.0237   %   (commulative = 99.83408390613896 %)
+Nodes of degree: 82   1     nodes  (commulative 4213 nodes)              ==>   0.0237   %   (commulative = 99.85778620526197 %)
+Nodes of degree: 86   1     nodes  (commulative 4214 nodes)              ==>   0.0237   %   (commulative = 99.88148850438499 %)
+Nodes of degree: 94   1     nodes  (commulative 4215 nodes)              ==>   0.0237   %   (commulative = 99.905190803508 %)
+Nodes of degree: 100  1     nodes  (commulative 4216 nodes)              ==>   0.0237   %   (commulative = 99.92889310263102 %)
+Nodes of degree: 101  1     nodes  (commulative 4217 nodes)              ==>   0.0237   %   (commulative = 99.95259540175404 %)
+Nodes of degree: 115  1     nodes  (commulative 4218 nodes)              ==>   0.0237   %   (commulative = 99.97629770087705 %)
+Nodes of degree: 165  1     nodes  (commulative 4219 nodes)              ==>   0.0237   %   (commulative = 100.00000000000007 %)
+=====================================================================================================================
+                                        Yeast-BioGrid.txt (undirected)                                           
+=====================================================================================================================
+
+WARNING from init.py: found 295 self-loops, here is one of them: ('855121', '855121')
+
+
+
+Nodes                  2826
+Edges                    8031
+Promotional edges        50.205 %
+Inhibitory edges         49.795 %
+max(in degree)           44
+max(ou degree)           52
+max(   degree)           96
+Average degree = 5.68365180467
+Average set(degree) = 27.7346938776
+no. connected components: 172
+component sizes: [2418, 22, 13, 12, 9, 9, 7, 6, 6, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+Nodes of degree: 1    686   nodes  (commulative 686 nodes)              ==>   24.2746  %   (commulative = 24.27459306440198 %)
+Nodes of degree: 2    496   nodes  (commulative 1182 nodes)              ==>   17.5513  %   (commulative = 41.825902335456476 %)
+Nodes of degree: 3    304   nodes  (commulative 1486 nodes)              ==>   10.7573  %   (commulative = 52.583156404812456 %)
+Nodes of degree: 4    238   nodes  (commulative 1724 nodes)              ==>   8.4218   %   (commulative = 61.00495399858457 %)
+Nodes of degree: 5    178   nodes  (commulative 1902 nodes)              ==>   6.2987   %   (commulative = 67.3036093418259 %)
+Nodes of degree: 6    143   nodes  (commulative 2045 nodes)              ==>   5.0602   %   (commulative = 72.36376503892427 %)
+Nodes of degree: 7    109   nodes  (commulative 2154 nodes)              ==>   3.857    %   (commulative = 76.22080679405519 %)
+Nodes of degree: 8    99    nodes  (commulative 2253 nodes)              ==>   3.5032   %   (commulative = 79.723991507431 %)
+Nodes of degree: 9    82    nodes  (commulative 2335 nodes)              ==>   2.9016   %   (commulative = 82.62561924982307 %)
+Nodes of degree: 10   70    nodes  (commulative 2405 nodes)              ==>   2.477    %   (commulative = 85.10261854210898 %)
+Nodes of degree: 11   57    nodes  (commulative 2462 nodes)              ==>   2.017    %   (commulative = 87.11960368011323 %)
+Nodes of degree: 12   43    nodes  (commulative 2505 nodes)              ==>   1.5216   %   (commulative = 88.6411889596603 %)
+Nodes of degree: 13   40    nodes  (commulative 2545 nodes)              ==>   1.4154   %   (commulative = 90.05661712668082 %)
+Nodes of degree: 14   39    nodes  (commulative 2584 nodes)              ==>   1.38     %   (commulative = 91.43665958952583 %)
+Nodes of degree: 15   37    nodes  (commulative 2621 nodes)              ==>   1.3093   %   (commulative = 92.74593064401982 %)
+Nodes of degree: 16   21    nodes  (commulative 2642 nodes)              ==>   0.7431   %   (commulative = 93.4890304317056 %)
+Nodes of degree: 17   23    nodes  (commulative 2665 nodes)              ==>   0.8139   %   (commulative = 94.3029016277424 %)
+Nodes of degree: 18   16    nodes  (commulative 2681 nodes)              ==>   0.5662   %   (commulative = 94.86907289455061 %)
+Nodes of degree: 19   22    nodes  (commulative 2703 nodes)              ==>   0.7785   %   (commulative = 95.6475583864119 %)
+Nodes of degree: 20   18    nodes  (commulative 2721 nodes)              ==>   0.6369   %   (commulative = 96.28450106157113 %)
+Nodes of degree: 21   9     nodes  (commulative 2730 nodes)              ==>   0.3185   %   (commulative = 96.60297239915076 %)
+Nodes of degree: 22   8     nodes  (commulative 2738 nodes)              ==>   0.2831   %   (commulative = 96.88605803255486 %)
+Nodes of degree: 23   9     nodes  (commulative 2747 nodes)              ==>   0.3185   %   (commulative = 97.20452937013448 %)
+Nodes of degree: 24   5     nodes  (commulative 2752 nodes)              ==>   0.1769   %   (commulative = 97.38145789101205 %)
+Nodes of degree: 25   6     nodes  (commulative 2758 nodes)              ==>   0.2123   %   (commulative = 97.59377211606513 %)
+Nodes of degree: 26   7     nodes  (commulative 2765 nodes)              ==>   0.2477   %   (commulative = 97.84147204529371 %)
+Nodes of degree: 27   7     nodes  (commulative 2772 nodes)              ==>   0.2477   %   (commulative = 98.0891719745223 %)
+Nodes of degree: 28   5     nodes  (commulative 2777 nodes)              ==>   0.1769   %   (commulative = 98.26610049539987 %)
+Nodes of degree: 29   7     nodes  (commulative 2784 nodes)              ==>   0.2477   %   (commulative = 98.51380042462846 %)
+Nodes of degree: 30   3     nodes  (commulative 2787 nodes)              ==>   0.1062   %   (commulative = 98.619957537155 %)
+Nodes of degree: 31   2     nodes  (commulative 2789 nodes)              ==>   0.0708   %   (commulative = 98.69072894550602 %)
+Nodes of degree: 32   8     nodes  (commulative 2797 nodes)              ==>   0.2831   %   (commulative = 98.97381457891012 %)
+Nodes of degree: 33   5     nodes  (commulative 2802 nodes)              ==>   0.1769   %   (commulative = 99.15074309978769 %)
+Nodes of degree: 34   4     nodes  (commulative 2806 nodes)              ==>   0.1415   %   (commulative = 99.29228591648975 %)
+Nodes of degree: 35   2     nodes  (commulative 2808 nodes)              ==>   0.0708   %   (commulative = 99.36305732484077 %)
+Nodes of degree: 37   1     nodes  (commulative 2809 nodes)              ==>   0.0354   %   (commulative = 99.39844302901628 %)
+Nodes of degree: 38   3     nodes  (commulative 2812 nodes)              ==>   0.1062   %   (commulative = 99.50460014154282 %)
+Nodes of degree: 40   2     nodes  (commulative 2814 nodes)              ==>   0.0708   %   (commulative = 99.57537154989384 %)
+Nodes of degree: 41   1     nodes  (commulative 2815 nodes)              ==>   0.0354   %   (commulative = 99.61075725406936 %)
+Nodes of degree: 42   2     nodes  (commulative 2817 nodes)              ==>   0.0708   %   (commulative = 99.68152866242038 %)
+Nodes of degree: 45   1     nodes  (commulative 2818 nodes)              ==>   0.0354   %   (commulative = 99.71691436659589 %)
+Nodes of degree: 49   1     nodes  (commulative 2819 nodes)              ==>   0.0354   %   (commulative = 99.7523000707714 %)
+Nodes of degree: 50   1     nodes  (commulative 2820 nodes)              ==>   0.0354   %   (commulative = 99.78768577494691 %)
+Nodes of degree: 52   1     nodes  (commulative 2821 nodes)              ==>   0.0354   %   (commulative = 99.82307147912242 %)
+Nodes of degree: 53   1     nodes  (commulative 2822 nodes)              ==>   0.0354   %   (commulative = 99.85845718329793 %)
+Nodes of degree: 60   1     nodes  (commulative 2823 nodes)              ==>   0.0354   %   (commulative = 99.89384288747344 %)
+Nodes of degree: 61   1     nodes  (commulative 2824 nodes)              ==>   0.0354   %   (commulative = 99.92922859164895 %)
+Nodes of degree: 65   1     nodes  (commulative 2825 nodes)              ==>   0.0354   %   (commulative = 99.96461429582446 %)
+Nodes of degree: 96   1     nodes  (commulative 2826 nodes)              ==>   0.0354   %   (commulative = 99.99999999999997 %)
+====================================================================================================================
+                                        Worm-BioGrid.txt (undirected)                                           
+====================================================================================================================
+
+WARNING from init.py: found 36 self-loops, here is one of them: ('179654', '179654')
+
+
+
+Nodes                  384
+Edges                    329
+Promotional edges        51.064 %
+Inhibitory edges         48.936 %
+max(in degree)           6
+max(ou degree)           5
+max(   degree)           9
+Average degree = 1.71354166667
+Average set(degree) = 5.0
+no. connected components: 108
+component sizes: [55, 25, 15, 15, 13, 9, 8, 7, 7, 6, 5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+Nodes of degree: 1    255   nodes  (commulative 255 nodes)              ==>   66.4062  %   (commulative = 66.40625 %)
+Nodes of degree: 2    67    nodes  (commulative 322 nodes)              ==>   17.4479  %   (commulative = 83.85416666666666 %)
+Nodes of degree: 3    29    nodes  (commulative 351 nodes)              ==>   7.5521   %   (commulative = 91.40624999999999 %)
+Nodes of degree: 4    11    nodes  (commulative 362 nodes)              ==>   2.8646   %   (commulative = 94.27083333333331 %)
+Nodes of degree: 5    8     nodes  (commulative 370 nodes)              ==>   2.0833   %   (commulative = 96.35416666666664 %)
+Nodes of degree: 6    5     nodes  (commulative 375 nodes)              ==>   1.3021   %   (commulative = 97.65624999999997 %)
+Nodes of degree: 7    5     nodes  (commulative 380 nodes)              ==>   1.3021   %   (commulative = 98.9583333333333 %)
+Nodes of degree: 8    3     nodes  (commulative 383 nodes)              ==>   0.7812   %   (commulative = 99.7395833333333 %)
+Nodes of degree: 9    1     nodes  (commulative 384 nodes)              ==>   0.2604   %   (commulative = 99.99999999999997 %)
+===================================================================================================================
+                                        Fly-BioGrid.txt (undirected)                                           
+===================================================================================================================
+
+WARNING from init.py: found 13 self-loops, here is one of them: ('35113', '35113')
+
+
+
+Nodes                  690
+Edges                    633
+Promotional edges        48.657 %
+Inhibitory edges         51.343 %
+max(in degree)           12
+max(ou degree)           11
+max(   degree)           21
+Average degree = 1.8347826087
+Average set(degree) = 9.5625
+no. connected components: 180
+component sizes: [188, 17, 15, 12, 9, 8, 8, 7, 7, 6, 6, 6, 6, 6, 6, 6, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1]
+
+Nodes of degree: 1    465   nodes  (commulative 465 nodes)              ==>   67.3913  %   (commulative = 67.3913043478261 %)
+Nodes of degree: 2    106   nodes  (commulative 571 nodes)              ==>   15.3623  %   (commulative = 82.75362318840581 %)
+Nodes of degree: 3    51    nodes  (commulative 622 nodes)              ==>   7.3913   %   (commulative = 90.1449275362319 %)
+Nodes of degree: 4    25    nodes  (commulative 647 nodes)              ==>   3.6232   %   (commulative = 93.768115942029 %)
+Nodes of degree: 5    20    nodes  (commulative 667 nodes)              ==>   2.8986   %   (commulative = 96.66666666666669 %)
+Nodes of degree: 6    1     nodes  (commulative 668 nodes)              ==>   0.1449   %   (commulative = 96.81159420289858 %)
+Nodes of degree: 7    8     nodes  (commulative 676 nodes)              ==>   1.1594   %   (commulative = 97.97101449275365 %)
+Nodes of degree: 8    3     nodes  (commulative 679 nodes)              ==>   0.4348   %   (commulative = 98.40579710144931 %)
+Nodes of degree: 10   1     nodes  (commulative 680 nodes)              ==>   0.1449   %   (commulative = 98.5507246376812 %)
+Nodes of degree: 11   4     nodes  (commulative 684 nodes)              ==>   0.5797   %   (commulative = 99.13043478260873 %)
+Nodes of degree: 12   1     nodes  (commulative 685 nodes)              ==>   0.1449   %   (commulative = 99.27536231884062 %)
+Nodes of degree: 13   1     nodes  (commulative 686 nodes)              ==>   0.1449   %   (commulative = 99.42028985507251 %)
+Nodes of degree: 15   1     nodes  (commulative 687 nodes)              ==>   0.1449   %   (commulative = 99.5652173913044 %)
+Nodes of degree: 16   1     nodes  (commulative 688 nodes)              ==>   0.1449   %   (commulative = 99.71014492753629 %)
+Nodes of degree: 19   1     nodes  (commulative 689 nodes)              ==>   0.1449   %   (commulative = 99.85507246376818 %)
+Nodes of degree: 21   1     nodes  (commulative 690 nodes)              ==>   0.1449   %   (commulative = 100.00000000000007 %)
+=====================================================================================================================
+                                        Mouse-BioGrid.txt (undirected)                                           
+=====================================================================================================================
+
+WARNING from init.py: found 45 self-loops, here is one of them: ('22034', '22034')
+
+
+
+Nodes                  1453
+Edges                    1773
+Promotional edges        48.731 %
+Inhibitory edges         51.269 %
+max(in degree)           36
+max(ou degree)           30
+max(   degree)           63
+Average degree = 2.44046799725
+Average set(degree) = 18.5769230769
+no. connected components: 168
+component sizes: [1031, 11, 9, 7, 7, 7, 6, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1]
+
+Nodes of degree: 1    823   nodes  (commulative 823 nodes)              ==>   56.6414  %   (commulative = 56.64143152099105 %)
+Nodes of degree: 2    263   nodes  (commulative 1086 nodes)              ==>   18.1005  %   (commulative = 74.74191328286304 %)
+Nodes of degree: 3    138   nodes  (commulative 1224 nodes)              ==>   9.4976   %   (commulative = 84.23950447350309 %)
+Nodes of degree: 4    61    nodes  (commulative 1285 nodes)              ==>   4.1982   %   (commulative = 88.43771507226427 %)
+Nodes of degree: 5    45    nodes  (commulative 1330 nodes)              ==>   3.097    %   (commulative = 91.53475567790777 %)
+Nodes of degree: 6    31    nodes  (commulative 1361 nodes)              ==>   2.1335   %   (commulative = 93.66827253957328 %)
+Nodes of degree: 7    21    nodes  (commulative 1382 nodes)              ==>   1.4453   %   (commulative = 95.11355815554025 %)
+Nodes of degree: 8    22    nodes  (commulative 1404 nodes)              ==>   1.5141   %   (commulative = 96.62766689607707 %)
+Nodes of degree: 9    11    nodes  (commulative 1415 nodes)              ==>   0.7571   %   (commulative = 97.38472126634548 %)
+Nodes of degree: 10   5     nodes  (commulative 1420 nodes)              ==>   0.3441   %   (commulative = 97.72883688919475 %)
+Nodes of degree: 11   8     nodes  (commulative 1428 nodes)              ==>   0.5506   %   (commulative = 98.27942188575359 %)
+Nodes of degree: 12   2     nodes  (commulative 1430 nodes)              ==>   0.1376   %   (commulative = 98.4170681348933 %)
+Nodes of degree: 13   3     nodes  (commulative 1433 nodes)              ==>   0.2065   %   (commulative = 98.62353750860287 %)
+Nodes of degree: 14   4     nodes  (commulative 1437 nodes)              ==>   0.2753   %   (commulative = 98.89883000688229 %)
+Nodes of degree: 15   1     nodes  (commulative 1438 nodes)              ==>   0.0688   %   (commulative = 98.96765313145215 %)
+Nodes of degree: 16   2     nodes  (commulative 1440 nodes)              ==>   0.1376   %   (commulative = 99.10529938059186 %)
+Nodes of degree: 17   3     nodes  (commulative 1443 nodes)              ==>   0.2065   %   (commulative = 99.31176875430143 %)
+Nodes of degree: 19   1     nodes  (commulative 1444 nodes)              ==>   0.0688   %   (commulative = 99.38059187887129 %)
+Nodes of degree: 20   1     nodes  (commulative 1445 nodes)              ==>   0.0688   %   (commulative = 99.44941500344115 %)
+Nodes of degree: 21   2     nodes  (commulative 1447 nodes)              ==>   0.1376   %   (commulative = 99.58706125258085 %)
+Nodes of degree: 24   1     nodes  (commulative 1448 nodes)              ==>   0.0688   %   (commulative = 99.65588437715071 %)
+Nodes of degree: 31   1     nodes  (commulative 1449 nodes)              ==>   0.0688   %   (commulative = 99.72470750172057 %)
+Nodes of degree: 46   1     nodes  (commulative 1450 nodes)              ==>   0.0688   %   (commulative = 99.79353062629043 %)
+Nodes of degree: 51   1     nodes  (commulative 1451 nodes)              ==>   0.0688   %   (commulative = 99.8623537508603 %)
+Nodes of degree: 55   1     nodes  (commulative 1452 nodes)              ==>   0.0688   %   (commulative = 99.93117687543015 %)
+Nodes of degree: 63   1     nodes  (commulative 1453 nodes)              ==>   0.0688   %   (commulative = 100.00000000000001 %)
+=====================================================================================================================
+                                        Plant-BioGrid.txt (undirected)                                           
+=====================================================================================================================
+
+WARNING from init.py: found 215 self-loops, here is one of them: ('829547', '829547')
+
+
+
+Nodes                  2278
+Edges                    3387
+Promotional edges        49.306 %
+Inhibitory edges         50.694 %
+max(in degree)           51
+max(ou degree)           48
+max(   degree)           99
+Average degree = 2.97366110623
+Average set(degree) = 21.3333333333
+no. connected components: 258
+component sizes: [1565, 18, 16, 15, 13, 9, 9, 9, 9, 8, 8, 8, 8, 8, 8, 7, 7, 7, 7, 6, 6, 6, 6, 6, 6, 6, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+Nodes of degree: 1    1096  nodes  (commulative 1096 nodes)              ==>   48.1124  %   (commulative = 48.112379280070236 %)
+Nodes of degree: 2    432   nodes  (commulative 1528 nodes)              ==>   18.964   %   (commulative = 67.07638279192274 %)
+Nodes of degree: 3    235   nodes  (commulative 1763 nodes)              ==>   10.3161  %   (commulative = 77.39244951712028 %)
+Nodes of degree: 4    137   nodes  (commulative 1900 nodes)              ==>   6.014    %   (commulative = 83.40649692712907 %)
+Nodes of degree: 5    84    nodes  (commulative 1984 nodes)              ==>   3.6874   %   (commulative = 87.09394205443373 %)
+Nodes of degree: 6    70    nodes  (commulative 2054 nodes)              ==>   3.0729   %   (commulative = 90.16681299385426 %)
+Nodes of degree: 7    47    nodes  (commulative 2101 nodes)              ==>   2.0632   %   (commulative = 92.23002633889378 %)
+Nodes of degree: 8    37    nodes  (commulative 2138 nodes)              ==>   1.6242   %   (commulative = 93.85425812115892 %)
+Nodes of degree: 9    22    nodes  (commulative 2160 nodes)              ==>   0.9658   %   (commulative = 94.82001755926252 %)
+Nodes of degree: 10   30    nodes  (commulative 2190 nodes)              ==>   1.3169   %   (commulative = 96.13696224758561 %)
+Nodes of degree: 11   12    nodes  (commulative 2202 nodes)              ==>   0.5268   %   (commulative = 96.66374012291485 %)
+Nodes of degree: 12   17    nodes  (commulative 2219 nodes)              ==>   0.7463   %   (commulative = 97.41000877963127 %)
+Nodes of degree: 13   9     nodes  (commulative 2228 nodes)              ==>   0.3951   %   (commulative = 97.80509218612819 %)
+Nodes of degree: 14   11    nodes  (commulative 2239 nodes)              ==>   0.4829   %   (commulative = 98.28797190517999 %)
+Nodes of degree: 15   5     nodes  (commulative 2244 nodes)              ==>   0.2195   %   (commulative = 98.50746268656717 %)
+Nodes of degree: 16   2     nodes  (commulative 2246 nodes)              ==>   0.0878   %   (commulative = 98.59525899912204 %)
+Nodes of degree: 17   1     nodes  (commulative 2247 nodes)              ==>   0.0439   %   (commulative = 98.63915715539947 %)
+Nodes of degree: 18   3     nodes  (commulative 2250 nodes)              ==>   0.1317   %   (commulative = 98.77085162423178 %)
+Nodes of degree: 19   3     nodes  (commulative 2253 nodes)              ==>   0.1317   %   (commulative = 98.90254609306409 %)
+Nodes of degree: 20   4     nodes  (commulative 2257 nodes)              ==>   0.1756   %   (commulative = 99.07813871817383 %)
+Nodes of degree: 21   2     nodes  (commulative 2259 nodes)              ==>   0.0878   %   (commulative = 99.1659350307287 %)
+Nodes of degree: 22   3     nodes  (commulative 2262 nodes)              ==>   0.1317   %   (commulative = 99.29762949956101 %)
+Nodes of degree: 23   1     nodes  (commulative 2263 nodes)              ==>   0.0439   %   (commulative = 99.34152765583845 %)
+Nodes of degree: 24   1     nodes  (commulative 2264 nodes)              ==>   0.0439   %   (commulative = 99.38542581211588 %)
+Nodes of degree: 25   1     nodes  (commulative 2265 nodes)              ==>   0.0439   %   (commulative = 99.42932396839332 %)
+Nodes of degree: 26   2     nodes  (commulative 2267 nodes)              ==>   0.0878   %   (commulative = 99.51712028094819 %)
+Nodes of degree: 27   2     nodes  (commulative 2269 nodes)              ==>   0.0878   %   (commulative = 99.60491659350306 %)
+Nodes of degree: 29   1     nodes  (commulative 2270 nodes)              ==>   0.0439   %   (commulative = 99.6488147497805 %)
+Nodes of degree: 30   1     nodes  (commulative 2271 nodes)              ==>   0.0439   %   (commulative = 99.69271290605793 %)
+Nodes of degree: 31   1     nodes  (commulative 2272 nodes)              ==>   0.0439   %   (commulative = 99.73661106233537 %)
+Nodes of degree: 32   1     nodes  (commulative 2273 nodes)              ==>   0.0439   %   (commulative = 99.7805092186128 %)
+Nodes of degree: 35   1     nodes  (commulative 2274 nodes)              ==>   0.0439   %   (commulative = 99.82440737489024 %)
+Nodes of degree: 40   1     nodes  (commulative 2275 nodes)              ==>   0.0439   %   (commulative = 99.86830553116768 %)
+Nodes of degree: 44   1     nodes  (commulative 2276 nodes)              ==>   0.0439   %   (commulative = 99.91220368744511 %)
+Nodes of degree: 50   1     nodes  (commulative 2277 nodes)              ==>   0.0439   %   (commulative = 99.95610184372255 %)
+Nodes of degree: 99   1     nodes  (commulative 2278 nodes)              ==>   0.0439   %   (commulative = 99.99999999999999 %)
+malsha17@yamaska ~/EvoByCompSel/parallel/Release-03/src/utilities/network_stats $ 
